@@ -1,6 +1,13 @@
-#!/usr/bin/python3  # Shebang line indicating the Python interpreter to use
+#!/usr/bin/python3
+"""
+Pascal triangle
+"""
+
 
 def pascal_triangle(n):
+    """
+    function returns a pascal triangle
+    """
     if n <= 0:
         return []  # Return an empty list if n is less than or equal to 0
 
