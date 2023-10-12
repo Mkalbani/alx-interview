@@ -14,6 +14,7 @@ def minOperations(n):
     Returns:
       The fewest number of operations needed, or 0 if n is impossible to achieve.
     """
+    
     if n <= 1:
         return n
 
@@ -28,5 +29,3 @@ def minOperations(n):
         divisor += 1
 
     return min_operations
-
-
