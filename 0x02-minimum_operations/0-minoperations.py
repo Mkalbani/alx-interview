@@ -14,16 +14,19 @@ def minOperations(n):
   Returns:
     The fewest number of operations needed, or 0 if n is impossible to achieve.
   """
+    # Assign a value to the variable minOperations.
+  # Assign a value to the variable min_operations.
+  if n < 2:
+      return n
+  min_operations = 2
+  operations = 2
+  x = 2
 
-  # If n is 1, then we only need to copy and paste the initial H character.
-  if n == 1:
-    return 1
+  while x < n:
+      if n % x == 0:
+          min_operations += 1
+          operations = x
+      x += operations
+      min_operations += 1
 
-  # If n is even, then we can copy and paste the first n / 2 H characters to get n H characters.
-  if n % 2 == 0:
-    return 2 + minOperations(n // 2)
-
-  # If n is odd, then we need to copy and paste the first (n - 1) / 2 H characters, and then copy and paste the entire file.
-  return 3 + minOperations((n - 1) // 2)
-
-
+  return min_operations
