@@ -5,28 +5,28 @@ defininig the minOperations
 
 
 def minOperations(n):
-  """
-  Calculates the fewest number of operations needed to result in exactly n H characters in the file.
+    """
+    Calculates the fewest number of operations needed to result in exactly n H characters in the file.
 
-  Args:
-    n: The number of H characters desired.
+    Args:
+      n: The number of H characters desired.
 
-  Returns:
-    The fewest number of operations needed, or 0 if n is impossible to achieve.
-  """
-    # Assign a value to the variable minOperations.
-  # Assign a value to the variable min_operations.
-  if n < 2:
-      return n
-  min_operations = 2
-  operations = 2
-  x = 2
+    Returns:
+      The fewest number of operations needed, or 0 if n is impossible to achieve.
+    """
+    if n <= 1:
+        return n
 
-  while x < n:
-      if n % x == 0:
-          min_operations += 1
-          operations = x
-      x += operations
-      min_operations += 1
+    min_operations = 0
+    divisor = 2
 
-  return min_operations
+    while n > 1:
+        while n % divisor == 0:
+            n //= divisor
+            min_operations += divisor
+
+        divisor += 1
+
+    return min_operations
+
+
