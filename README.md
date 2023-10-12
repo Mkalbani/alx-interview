@@ -1,1 +1,1 @@
-pascal
+min operations

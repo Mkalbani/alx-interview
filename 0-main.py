@@ -1,16 +1,12 @@
 #!/usr/bin/python3
 """
-0-main
+Main file for testing
 """
-pascal_triangle = __import__('0-pascal_triangle').pascal_triangle
 
-def print_triangle(triangle):
-    """
-    Print the triangle
-    """
-    for row in triangle:
-        print("[{}]".format(",".join([str(x) for x in row])))
+minOperations = __import__('0-minoperations').minOperations
 
+n = 4
+print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
 
-if __name__ == "__main__":
-    print_triangle(pascal_triangle(5))
+n = 12
+print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
