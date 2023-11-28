@@ -1,5 +1,14 @@
 #!/usr/bin/python3
+"""
+Defining the island perimeter
+"""
+
+
 def island_perimeter(grid):
+    """
+    control flow to initialize the rows
+    """
+
     if not grid or not grid[0]:
         return 0
 
