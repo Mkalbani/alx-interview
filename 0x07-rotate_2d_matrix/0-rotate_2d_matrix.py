@@ -2,11 +2,13 @@
 """
 0x07 - Rotate 2D Matrix
 """
+
+
 def rotate_2d_matrix(matrix):
     """
-    Rotates an n x n 2D matrix 90 degrees clockwise in-place.
+    Rotates an nxn 2D matrix 90 degrees clockwise in place
 
-    :param matrix: List of lists representing the 2D matrix
+    :param matrix: List of lists 
     """
     n = len(matrix)
 
