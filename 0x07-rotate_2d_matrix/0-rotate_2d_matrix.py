@@ -8,7 +8,7 @@ def rotate_2d_matrix(matrix):
     """
     Rotates an nxn 2D matrix 90 degrees clockwise in place
 
-    :param matrix: List of lists 
+    :param matrix: List of lists
     """
     n = len(matrix)
 
